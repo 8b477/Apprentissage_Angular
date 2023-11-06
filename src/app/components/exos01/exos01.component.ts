@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Exos01Component {
 
-public counter : number = 0
-public isStartedFirst = false
+public isStartedFirst : boolean = false
+public counter   : number = 0
 private interval : any
 
 
