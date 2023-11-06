@@ -39,9 +39,9 @@ ResetChrono()
 
 
 public interval2 : any
-public minute : number = 0
-public seconde : number = 0
-public isStartedFirst2 = false
+public minute    : number = 0
+public seconde   : number = 0
+public isStartedFirst2    = false
 
 StartChrono2()
 {
@@ -83,10 +83,10 @@ ResetChrono2()
 
 
 public interval3 : any
-public minute2 : number = 0
-public seconde2 : number = 0
-public mili : number = 0
-public isStartedFirst3 = false
+public minute2   : number = 0
+public seconde2  : number = 0
+public mili      : number = 0
+public isStartedFirst3    = false
 
 StartChrono3()
 {
@@ -124,9 +124,9 @@ ResetChrono3()
     if(this.interval3)
   {
     clearInterval(this.interval3)
-    this.minute2 = 0
+    this.minute2  = 0
     this.seconde2 = 0
-    this.mili = 0
+    this.mili     = 0
     this.isStartedFirst3 = false
   }
 }
