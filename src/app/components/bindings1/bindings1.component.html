@@ -1,0 +1,122 @@
+<div>
+    <h2 class="underline">🔥 Les différents Bindings : 🔥</h2>
+</div>
+ 
+<h4>➡️ Le One Way Binding</h4>
+
+<div class="row">
+
+    <div class="col s3">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <p>Ma string : {{ str }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s3">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <p>Mon nombre : {{ num }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s3">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <p>Mon Boolean : {{ bool }}</p>
+        </div>
+      </div>
+    </div>
+
+     <div class="col s3">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <p>Ma Date : {{ dateDJ | date:'dd/mm/yyyy' }}</p>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+<!-- ********************************************************* -->
+
+<h4>➡️ Le Two Way Binding</h4>
+
+<div class="row">
+
+    <div class="col s4">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">   
+            <p>Mon text input : {{ str2 }}</p>
+            <input type="text"
+                   [(ngModel)]="str2"
+            >
+        </div>    
+      </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">      
+            <p>Ma date input : {{ date2 }}</p>
+            <input type="date"
+                   [(ngModel)]="date2"
+            >
+        </div> 
+      </div>
+    </div>
+
+    <div class="col s4">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">        
+            <p>Color picker input : {{ color }}</p>
+             <input type="color"
+                   [(ngModel)]="color"
+            >
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+<!-- ********************************************************* -->
+
+<h4>➡️ Le Event Binding</h4>
+
+<div class="row">
+
+    <div class="col s6">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">      
+        <button 
+            class="btn"
+            (click)="addToCount()"
+        >➕</button>
+        <button 
+            class="btn"
+            (click)="remToCount()"
+        >➖</button>
+
+          <p>Total : {{ counter }}</p>
+        </div>    
+      </div>
+
+    </div>
+    <div class="col s6">
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+        <button 
+          class="btn"
+          (click)="startChrono()"
+          >Start chrono
+        </button>    
+        <p>{{ timer }}</p>
+        </div>  
+      </div>
+    </div>
+
+</div>
