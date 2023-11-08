@@ -1,0 +1,62 @@
+
+<h2>Faites vos courses !</h2>
+<div class="row displayInput">
+    <div class="input-field col s6">
+        <input 
+            id="first_name"
+            type="text"
+            class="validate"
+            placeholder=""
+            [(ngModel)]="produit"
+            (input)="CheckValidity()">
+        <label class="labelperso" for="first_name" labelperso>Produit</label>
+    </div>
+
+    <div class="input-field col s6">
+        <input 
+        id="last_name"
+        type="number"
+        class="validate"
+        placeholder=""
+        [(ngModel)]= "nombre"
+        (input)="CheckValidity()"
+        >
+        <label class="labelperso" for="last_name" >Min 1, Max 5 : </label>
+    </div>
+    <div class="row rowPerso">
+        <button *ngIf="estValide"
+                class="btn"
+                (click)="AddProduct()"
+                >
+                Ajouter
+        </button></div>
+</div>   
+  
+<div class="rowPerso">
+<button class="btn persoBtn" (click)="displayPannier()">🧺Liste des courses 🧺</button>
+</div>
+
+<div class="tab">
+    <table *ngIf="showPannier">
+    <thead>
+        <tr>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Date d'ajout</th>
+            <th>Pour mamy</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <ng-container  *ngFor="let item of listCourse ;let i = index">
+        <tr *ngIf="item.nom != '' && item.nombre != 0">
+        <td>{{ item.nom }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.dateDajout | date : 'dd/mm/yyyy à hh:mm:ss'}}</td>
+        <td>{{ item.nombre | displayPannier}}</td>
+        <td><button (click)="RemoveItem(i)">🗑️</button></td>
+        </tr>
+    </ng-container>
+    </tbody>
+    </table>
+</div>

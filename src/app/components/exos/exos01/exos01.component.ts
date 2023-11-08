@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Exos01Component {
 
+//#region First Chrono
 public isStartedFirst : boolean = false
 public counter   : number = 0
 private interval : any
@@ -36,8 +37,9 @@ ResetChrono()
     this.isStartedFirst = false
   }
 }
+//#endregion
 
-
+//#region Seconde Chrono
 public interval2 : any
 public minute    : number = 0
 public seconde   : number = 0
@@ -60,7 +62,6 @@ StartChrono2()
 }
 
 
-
 StopChrono2()
 {
   if(this.interval2)
@@ -80,8 +81,9 @@ ResetChrono2()
     this.isStartedFirst2 = false
   }
 }
+//#endregion
 
-
+//#region Third Chrono
 public interval3 : any
 public minute2   : number = 0
 public seconde2  : number = 0
@@ -130,4 +132,5 @@ ResetChrono3()
     this.isStartedFirst3 = false
   }
 }
+//#endregion
 }

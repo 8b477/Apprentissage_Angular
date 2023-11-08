@@ -14,7 +14,7 @@ export class Bindings1Component {
   public dateDJ : Date    = new Date
 
   // binding Two Way
-  public str2 !  : string
+  public str2 ! : string
   public date2! : Date
   public color! : string
 
